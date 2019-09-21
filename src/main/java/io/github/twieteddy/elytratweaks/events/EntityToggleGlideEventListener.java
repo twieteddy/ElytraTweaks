@@ -18,16 +18,17 @@ public class EntityToggleGlideEventListener implements Listener {
 
   @EventHandler
   public void onEntityToggleGlideEvent(EntityToggleGlideEvent e) {
-    if (!(e.getEntity() instanceof Player)) return;
-    if (e.getEntity().hasPermission("elytratweaks.glide")) return;
+    if (!(e.getEntity() instanceof Player))
+      return;
+    if (e.getEntity().hasPermission("elytratweaks.glide"))
+      return;
 
     Player p = (Player) e.getEntity();
     e.setCancelled(true);
-    p.spigot()
-        .sendMessage(
-            ChatMessageType.ACTION_BAR,
-            new ComponentBuilder(this.plugin.getCfg().getMessage("elytraglide_disabled"))
-                .color(ChatColor.RED)
-                .create());
+    p.spigot().sendMessage(
+        ChatMessageType.ACTION_BAR,
+        new ComponentBuilder(this.plugin.getCfg().getMessage("elytraglide_disabled"))
+            .color(ChatColor.RED)
+            .create());
   }
 }

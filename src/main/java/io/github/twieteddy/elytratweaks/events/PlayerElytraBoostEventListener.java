@@ -16,25 +16,25 @@ public class PlayerElytraBoostEventListener implements Listener {
 
   @EventHandler
   public void disableElytraBoost(PlayerElytraBoostEvent e) {
-    if (!e.getPlayer().hasPermission("elytratweaks.boost")) {
-      e.setCancelled(true);
-      e.getPlayer().spigot().sendMessage(
-          ChatMessageType.ACTION_BAR,
-          new ComponentBuilder(this.plugin.getCfg().getMessage("elytraboost_disabled"))
-              .color(ChatColor.RED)
-              .create());
-    }
+    if (e.getPlayer().hasPermission("elytratweaks.boost"))
+      return;
+    e.setCancelled(true);
+    e.getPlayer().spigot().sendMessage(
+        ChatMessageType.ACTION_BAR,
+        new ComponentBuilder(this.plugin.getCfg().getMessage("elytraboost_disabled"))
+            .color(ChatColor.RED)
+            .create());
   }
 
   @EventHandler
   public void infiniteFirework(PlayerElytraBoostEvent e) {
-    if (!e.getPlayer().hasPermission("elytratweaks.infinitefirework")) return;
+    if (!e.getPlayer().hasPermission("elytratweaks.infinitefirework"))
+      return;
+    if (e.getFirework().getFireworkMeta().getDisplayName() == null)
+      return;
 
     String displayName = e.getFirework().getFireworkMeta().getDisplayName();
-
-    if (displayName == null) return;
-
-    String prefix = ChatColor.translateAlternateColorCodes('&', plugin.getCfg().getInfiniteFireworkPrefix());
+    String prefix = plugin.getCfg().getInfiniteFireworkPrefix();
 
     if (displayName.startsWith(prefix))
       e.setShouldConsume(false);
