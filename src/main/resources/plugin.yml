@@ -1,6 +1,6 @@
 name: ElytraTweaks
-version: "0.1"
-api-version: "1.14"
+version: "1.0"
+api-version: "1.13"
 description: Manages different elytra behaviors
 
 author: Teddy
