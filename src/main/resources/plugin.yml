@@ -1,0 +1,24 @@
+name: ElytraTweaks
+version: 0.1
+api-version: 1.14
+description: Manages different elytra behaviors
+
+author: Teddy
+authors: []
+website: https://twieteddy.github.io
+
+main: io.github.twieteddy.elytratweaks.ElytraTweaksPlugin
+database: false
+depend: []
+softdepend: []
+
+permissions:
+  elytratweaks.boost:
+    description: Set to false to disable firework boost
+    default: true
+  elytratweaks.glide:
+    description: Set to false to disable elytra gliding
+    default: true
+  elytratweaks.infinitefirework:
+    description: Allow the usage of an infinite firework
+    default: false

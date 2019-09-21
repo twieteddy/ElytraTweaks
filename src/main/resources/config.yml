@@ -1,0 +1,5 @@
+infinite_firework_prefix: '&e&b&f&r'
+message:
+  elytraboost_disabled: '&cDer Elytra-Boost ist deaktiviert'
+  elytraglide_disabled: '&cDas Elytra-Gleiten ist deaktiviert'
+
