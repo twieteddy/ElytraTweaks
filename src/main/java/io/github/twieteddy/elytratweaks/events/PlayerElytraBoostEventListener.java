@@ -14,6 +14,10 @@ public class PlayerElytraBoostEventListener implements Listener {
 
   public PlayerElytraBoostEventListener(ElytraTweaksPlugin plugin) { this.plugin = plugin; }
 
+  /**
+   * Handle Elytra Boost Event
+   * @param e Fired event
+   */
   @EventHandler
   public void disableElytraBoost(PlayerElytraBoostEvent e) {
     if (e.getPlayer().hasPermission("elytratweaks.boost"))
@@ -26,6 +30,10 @@ public class PlayerElytraBoostEventListener implements Listener {
             .create());
   }
 
+  /**
+   *
+   * @param e
+   */
   @EventHandler
   public void infiniteFirework(PlayerElytraBoostEvent e) {
     if (!e.getPlayer().hasPermission("elytratweaks.infinitefirework"))
