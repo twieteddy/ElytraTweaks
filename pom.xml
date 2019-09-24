@@ -7,7 +7,7 @@
   <!-- general settings -->
   <groupId>io.github.twieteddy</groupId>
   <artifactId>ElytraTweaks</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <build>
     <plugins>
       <plugin>
@@ -65,6 +65,12 @@
       <artifactId>paper-api</artifactId>
       <version>1.13.2-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+      <version>17.0.0</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 </project>
